@@ -1,0 +1,9 @@
+FROM mysql:latest
+
+WORKDIR /docker-entrypoint-initdb.d
+
+COPY ./rl.sql .
+
+EXPOSE 3306
+
+ENV LANG=C.UTF-8
